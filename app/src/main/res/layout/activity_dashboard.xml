@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    style="@style/loginParent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="end"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/colorAccent"
+        android:text="Actions"
+        android:src="@drawable/ic_baseline_clear_all_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/credit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/add_fab"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/colorAccent"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toTopOf="@+id/add_fab"
+        app:layout_constraintEnd_toEndOf="@+id/add_fab"
+        app:srcCompat="@drawable/ic_add_black_24dp"
+        tools:ignore="VectorDrawableCompat" />
+
+    <TextView
+        android:id="@+id/credit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="100dp"
+        android:layout_toStartOf="@+id/credit"
+        android:layout_toLeftOf="@+id/credit"
+        android:text="Credit"
+        app:layout_constraintBottom_toBottomOf="@+id/credit"
+        app:layout_constraintEnd_toStartOf="@+id/credit"
+        app:layout_constraintTop_toTopOf="@+id/credit" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/debit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/credit"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="14dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/colorAccent"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toTopOf="@+id/credit"
+        app:layout_constraintEnd_toEndOf="@+id/credit"
+        app:layout_constraintStart_toStartOf="@+id/credit"
+        app:srcCompat="@drawable/ic_baseline_chevron_right_24"
+        tools:ignore="VectorDrawableCompat" />
+
+    <TextView
+        android:id="@+id/debit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/credit_text"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="51dp"
+        android:layout_toStartOf="@+id/debit"
+        android:layout_toLeftOf="@+id/debit"
+        android:text="Debit"
+        app:layout_constraintBottom_toBottomOf="@+id/debit"
+        app:layout_constraintEnd_toStartOf="@+id/debit"
+        app:layout_constraintTop_toTopOf="@+id/debit" />
+
+    <ScrollView
+        style="@style/parent">
+
+        <RelativeLayout
+            style="@style/parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:weightSum="12">
+
+                <LinearLayout
+                    style="@style/parent"
+                    android:background="@drawable/dashboard_shape_bk"
+                    android:orientation="vertical"
+                    android:layout_weight="3">
+
+                    <ImageView
+                        style="@style/parent"
+                        android:background="@drawable/ic_login_bk"
+                        android:contentDescription="Dashboard background" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:orientation="vertical"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp">
+
+
+                <TextView
+                    android:id="@+id/headerText"
+                    style="@style/headerText"
+                    android:layout_gravity="left"
+                    android:textAlignment="viewStart"
+                    android:text="Dashboard"
+                    android:layout_marginTop="40dp"
+                    tools:ignore="RtlCompat" />
+
+                <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    style="@style/loginCard"
+                    app:cardCornerRadius="@dimen/loginCardRadius"
+                    android:elevation="5dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/loginViewsMargin"
+                    android:layout_marginBottom="@dimen/loginViewsMargin"
+                    android:background="@color/whiteCardColor">
+
+                    <LinearLayout
+                        style="@style/linearParent"
+                        android:layout_gravity="center"
+                        android:padding="@dimen/loginViewsMargin">
+
+                        <TextView
+                            style="@style/headerTextPrimary"
+                            android:textAlignment="viewStart"
+                            android:text="Account Balance :"
+                            android:layout_marginTop="@dimen/loginViewsMargin"
+                            android:gravity="start" />
+
+                        <TextView
+                            android:id="@+id/balance"
+                            style="@style/headerTextPrimary"
+                            android:textAlignment="viewStart"
+                            android:text=""
+                            android:textColor="@android:color/black"
+                            android:layout_marginTop="@dimen/loginViewsMargin"
+                            android:gravity="start" />
+
+                        <TextView
+                            android:id="@+id/resetBalence"
+                            style="@style/viewParent"
+                            android:text="Reset Balance"
+                            android:textColor="@color/primaryTextColor"
+                            android:textSize="@dimen/newsMoreTextSize"
+                            android:layout_gravity="end"
+                            android:layout_marginTop="10dp"/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    style="@style/loginCard"
+                    app:cardCornerRadius="@dimen/loginCardRadius"
+                    android:elevation="5dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/loginViewsMargin"
+                    android:layout_marginBottom="@dimen/loginViewsMargin"
+                    android:background="@color/whiteCardColor">
+
+                    <LinearLayout
+                        android:id="@+id/allTransaction"
+                        style="@style/linearParent"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            style="@style/headerTextPrimary"
+                            android:text="Transaction History"
+                            android:layout_marginTop="@dimen/loginViewsMargin"
+                            android:layout_marginBottom="@dimen/loginViewsMargin"
+                            android:textColor="@android:color/holo_green_dark"/>
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    style="@style/loginCard"
+                    app:cardCornerRadius="@dimen/loginCardRadius"
+                    android:elevation="5dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/loginViewsMargin"
+                    android:layout_marginBottom="@dimen/loginViewsMargin"
+                    android:background="@color/whiteCardColor">
+
+                    <LinearLayout
+                        android:id="@+id/signout"
+                        style="@style/linearParent"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            style="@style/headerTextPrimary"
+                            android:text="Sign Out"
+                            android:layout_marginTop="@dimen/loginViewsMargin"
+                            android:layout_marginBottom="@dimen/loginViewsMargin"
+                            android:textColor="@android:color/holo_red_light"/>
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

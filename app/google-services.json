@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "614169149914",
+    "firebase_url": "https://billtrack-b9e8d-default-rtdb.firebaseio.com",
+    "project_id": "billtrack-b9e8d",
+    "storage_bucket": "billtrack-b9e8d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:614169149914:android:6af8d6759cdead04b540e3",
+        "android_client_info": {
+          "package_name": "com.example.billtrack"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "614169149914-okj7o5m8740vbma6avcorb59uhvhtmek.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAzB5P-gnHNhavwzETJzwgx6T39SX3RwZg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "614169149914-okj7o5m8740vbma6avcorb59uhvhtmek.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
